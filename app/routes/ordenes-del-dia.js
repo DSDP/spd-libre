@@ -18,7 +18,7 @@ export default Ember.Route.extend(InfinityRoute, AuthenticatedRouteMixin, {
 				query[filter.get('type.field')] = value;
 			})
 			this.set('controller.model.reachedInfinity', false);
-			this.get('controller').set('model.proyectos', this.infinityModel("proyecto", query));
+			this.get('controller').set('model', this.infinityModel("od", query));
 		}
 	},
 
