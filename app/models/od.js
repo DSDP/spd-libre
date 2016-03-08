@@ -13,7 +13,7 @@ export default DS.Model.extend({
 
 	isVigente: Ember.computed('fecha_art113', function () {
 		if (this.get('fecha_art113')) {
-			return moment() < moment(this.get('fecha_art113'), 'YYYY-MM-DD');
+			return moment() < moment(this.get('fecha_art113'));
 		} else {
 			return false;
 		}
