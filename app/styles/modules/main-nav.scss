@@ -3,6 +3,7 @@ $tablet: new-breakpoint(max-width 768px 12);
 $desktop: new-breakpoint(max-width 993px 12);
 
 $mobile-height: new-breakpoint(max-height 620px 12);
+$mobile-height-min: new-breakpoint(max-height 550px 12);
 
 .main-nav {
 	float: left;
@@ -22,7 +23,11 @@ $mobile-height: new-breakpoint(max-height 620px 12);
 
 		@include media($mobile) {
 	    	padding: 15px 0 10px 0;
-		}
+		}	
+
+		@include media($mobile-height-min) {
+	    	padding: 0;
+		}		
 
 	   &:hover {
 			background: lighten($main-blue, 10%);
@@ -60,6 +65,10 @@ $mobile-height: new-breakpoint(max-height 620px 12);
 		font-size: 30px;
 		margin-bottom: 5px;
 		display: block;
+
+		@include media($mobile-height-min) {
+	    	font-size: 18px;
+		}			
 	}
 
 	.active {
@@ -79,7 +88,7 @@ $mobile-height: new-breakpoint(max-height 620px 12);
 		}
 
 		.fa-calendar-o:before {
-			content: "\f274";
+			//content: "\f274";
 		}
 
 	}

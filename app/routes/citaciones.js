@@ -6,7 +6,7 @@ export default Ember.Route.extend(InfinityRoute, AuthenticatedRouteMixin, {
 	_listName: 'model',
 
 	model: function() {
-	  return this.infinityModel("citacion", { perPage: 25, startingPage: 1});
+	  return this.infinityModel("citacion", { perPage: 25, startingPage: 1, ordering: '-fecha'});
 	},	
 });
 

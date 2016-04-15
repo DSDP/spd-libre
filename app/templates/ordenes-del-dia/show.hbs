@@ -17,6 +17,9 @@
 			{{#each model.proyectos as |proyecto|}}
 				<div class="proyectos-item">{{proyecto.codigo_exp}}</div>
 			{{/each}}
+			{{#each model.mensajes as |mensaje|}}
+				<div class="proyectos-item">{{mensaje.codigo_exp}}</div>
+			{{/each}}			
 			</div>
 
 			<p class="titulo">{{proyecto_cabecera.titulo}}</p>

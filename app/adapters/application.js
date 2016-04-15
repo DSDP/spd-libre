@@ -2,7 +2,7 @@ import DS from 'ember-data';
 import config from '../config/environment';
 
 export default DS.RESTAdapter.extend({
-	coalesceFindRequests: false,
+	coalesceFindRequests: true,
 	namespace: 'api',
 	host: config.APP.host || '',
 

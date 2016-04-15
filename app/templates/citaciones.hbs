@@ -14,7 +14,8 @@
 		<div class="-list">
 			{{#each model as |citacion|}}
 					<div class="citacion-item">
-						{{time-format citacion.fecha '[El] Do [de] MMMM [de] dddd [a las] h:mm'}}<br> {{citacion.estado}} <br> {{citacion.resumen}} <br> {{citacion.observaciones}} <br> <small>({{citacion.fk_lugar.nombre}} | {{citacion.fk_lugar.ubicacion}})</small>
+						{{time-format citacion.fecha '[El] dddd Do [de] MMMM [de] YYYY [a las] h:mm'}}<br> {{citacion.fk_comision_cabecera.datos.nombre}} <br> {{citacion.estado}} <br> {{citacion.resumen}} <br> {{citacion.observaciones}} <br> <small>({{citacion.fk_lugar.nombre}} | {{citacion.fk_lugar.ubicacion}})</small>
+						<br>
 					</div>
 			{{/each}}
 		</div>

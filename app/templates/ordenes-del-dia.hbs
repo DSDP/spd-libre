@@ -8,7 +8,7 @@
 	<div class="ordenes-del-dia">
 		<section class="scroll">
 			<div class="-list">
-				{{#each model as |orden_del_dia|}}
+				{{#each model.ods as |orden_del_dia|}}
 					{{#if orden_del_dia.despacho.isFulfilled}}
 						<div class="proyecto-item">
 							<div class="item-left">
@@ -18,6 +18,14 @@
 							</div>
 							<div class="item-center">
 							<p>{{orden_del_dia.despacho.sumario}}</p>
+							<p> <b>
+								{{#if orden_del_dia.proyecto_cabecera}}
+									{{orden_del_dia.proyecto_cabecera.codigo_exp}}
+								{{else}}
+									{{orden_del_dia.mensaje_cabecera.codigo_exp}}
+								{{/if}}
+								</b>
+							</p>
 							</div>
 							<div class="item-right">
 								<div class="item-meta">

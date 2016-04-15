@@ -6,7 +6,7 @@ export default Ember.Route.extend(InfinityRoute, AuthenticatedRouteMixin, {
 
 	model: function() {
 		return Ember.RSVP.hash({
-          	proyectos: this.infinityModel("proyecto", { perPage: 25, startingPage: 1, ordering: '-codigo_anio, -codigo_num, -codigo_origen', tipo_camara: 'Diputados', firm_nombre_leg_func: this.get('session.user.diputado') })
+          	proyectos: this.infinityModel("proyecto", { perPage: 25, startingPage: 1, ordering: '-codigo_anio, -codigo_num, -codigo_origen', tipo_camara: 'Diputados' })
      	});		
 	},
 	

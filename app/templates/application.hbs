@@ -2,6 +2,7 @@
 
 {{#if session.isAuthenticated}}
 <nav {{bind-attr class="isShowMenu:show"}}>
+	{{#perfect-scroll wheelSpeed=2}}
 	{{#link-to 'index' class="app-logo"}}
 		<img src="assets/images/logo-hcdn.png">
 	{{/link-to}}
@@ -53,8 +54,8 @@
 	  		{{#link-to 'login'}}Ingresar{{/link-to}}
 		{{/if}}
 	</div>
+	{{/perfect-scroll}}
 </nav>
-
 <div class="action-bar">
 	{{t-menu a="arrow-360-left" action="toggleMenu" class="smart-search" is-open=isShowMenu}}
 </div>
