@@ -16,8 +16,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      client_id: 'BEEeD62Nwr7fGQGIEsv2pcHgCRBcIRHNYi2WbC0P',
-      client_secret: 't.CuVCxUMm?YzaXt;!C@39vIqTkLy9xz:vc;r@lHbc2dY3hiwv!cBqQrb6OV7.RYRAaroQ5zXLboGzlXOO5STJUflGuW:rptCrIXXbpiDYVr92vu6@=m87w.oKJvs@:j',      
+      client_id: '=yEvTDB6GU34syMA0n63RD8OQxgCec6w32KDC9Am',
+      client_secret: '4BxxY7C4_jM!l4JlYe!1f;LuFRMf=!M;iabG;Mjad:hmnZ.Ma.Go=@9hYqIc5fwKAWg=rr_fxXW6bAP-iRUoZrTDK!fILZ;1u-nf@@ksDHKlX;k!h2jrGMQJ;F70!abw',      
       //host: 'https://spd.hcdn.gob.ar',
 
        minifyHTML: {
