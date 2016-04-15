@@ -16,9 +16,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      client_id: 'b=5ScaFmagIxpaAriSV;.?P@AfzMdh7Y9LnRDukY',
-      client_secret: 'hyZGfL58D?K4hIeKvGx@9@QGFeKqpYq:GuPuynHTIEuie?:!SJOG!IYszh;=@ph1I4He0-.QZ:r=lWBAB1cr2a9nhp8iAySuNgDTcgn=C!pZHb7wiPPU!5Pim0k8apnk',
-      
+      client_id: 'BEEeD62Nwr7fGQGIEsv2pcHgCRBcIRHNYi2WbC0P',
+      client_secret: 't.CuVCxUMm?YzaXt;!C@39vIqTkLy9xz:vc;r@lHbc2dY3hiwv!cBqQrb6OV7.RYRAaroQ5zXLboGzlXOO5STJUflGuW:rptCrIXXbpiDYVr92vu6@=m87w.oKJvs@:j',      
       //host: 'https://spd.hcdn.gob.ar',
 
        minifyHTML: {
@@ -71,7 +70,7 @@ module.exports = function(environment) {
      ENV.APP.LOG_TRANSITIONS_INTERNAL = false;
      ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-     ENV.APP.host = "https://spd.hcdn.gob.ar";
+     ENV.APP.host = "https://spd.hcdn.gob.ar/";
 
      ENV['simple-auth'] = {
          authorizer: 'simple-auth-authorizer:oauth2-bearer',
