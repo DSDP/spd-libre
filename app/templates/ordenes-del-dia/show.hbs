@@ -1,6 +1,7 @@
 {{close-delay target=".side-panel" delay=700 closeClass="close" transitionTo='ordenes-del-dia.index'}}
 
 {{#liquid-if model class="side-panel anim-article show"}}
+	{{#perfect-scroll wheelSpeed=2}}
 	<article>
 		<div class="article-meta">
 			<span>Periodo {{model.periodo}}</span>
@@ -35,4 +36,5 @@
 			</ul>
 		</div>
 	</article>
+	{{/perfect-scroll}}
 {{/liquid-if}}

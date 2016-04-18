@@ -12,7 +12,7 @@ $success-color: #e6efc2 !default;
   display: inline-block;
   font-size: $badge-font-size;
   line-height: 1;
-  padding: 0.4em 1.2em;
+  padding: 0.4em 1.2em 0.4em 1.2em;
   height: 25px;
   margin: 20px 15px 0 0;
 
@@ -37,4 +37,40 @@ $success-color: #e6efc2 !default;
 
 .badge-success {
   @include badge($success-color);
+}
+
+
+@mixin rectangle-badge($color: $medium-gray) {
+  background-color: $color;
+  //border-radius: $badge-font-size * 5;
+  color: darken($color, 60%);
+  display: inline-block;
+  font-size: $badge-font-size;
+  line-height: 1;
+  padding: 0.4em 1.2em 0.4em 1.2em;
+  //height: 25px;
+  margin: 20px 15px 0 0;
+
+}
+
+
+.rectangle-badge {
+  @include rectangle-badge;
+  background: #ddd;
+}
+
+.rectangle-badge-alert {
+  @include rectangle-badge($alert-color);
+}
+
+.rectangle-badge-error {
+  @include rectangle-badge($error-color);
+}
+
+.rectangle-badge-notice {
+  @include rectangle-badge($notice-color);
+}
+
+.rectangle-badge-success {
+  @include rectangle-badge($success-color);
 }

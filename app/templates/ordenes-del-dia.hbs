@@ -17,15 +17,24 @@
 								{{/link-to}}
 							</div>
 							<div class="item-center">
-							<p>{{orden_del_dia.despacho.sumario}}</p>
-							<p> <b>
-								{{#if orden_del_dia.proyecto_cabecera}}
-									{{orden_del_dia.proyecto_cabecera.codigo_exp}}
+								<p>{{orden_del_dia.despacho.sumario}}</p>
+								{{#if orden_del_dia.proyecto_cabecera.codigo_exp}}
+									<p class="rectangle-badge-notice">
+									<b>Proyectos a tratar: </b>
+									{{#each orden_del_dia.proyectos as |proyecto|}}
+										{{proyecto.codigo_exp}}
+									{{/each}}
+									</p>
 								{{else}}
-									{{orden_del_dia.mensaje_cabecera.codigo_exp}}
+									{{#if orden_del_dia.mensaje_cabecera.codigo_exp}}
+										<p class="rectangle-badge-notice">
+											<b>Proyectos a tratar: </b>
+											{{#each orden_del_dia.mensajes as |mensaje|}}
+												{{mensaje.codigo_exp}}
+											{{/each}}
+										</p>
+									{{/if}}
 								{{/if}}
-								</b>
-							</p>
 							</div>
 							<div class="item-right">
 								<div class="item-meta">
