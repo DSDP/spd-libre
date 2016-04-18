@@ -20,6 +20,11 @@ export default DS.Model.extend({
 		}
 	}),
 
+	link_pdf: Ember.computed('periodo', 'numero', function () {
+		var str = Ember.String.loc("http://www4.hcdn.gob.ar/dependencias/dcomisiones/periodo-%@/%@-%@.pdf", [(this.get('periodo') - (this.get('periodo') % 2)) , (this.get('periodo') - (this.get('periodo') % 2)), this.get('numero')]);
+		return str;
+	}),
+
 	proyecto_cabecera: Ember.computed('proyectos.@each', function () {
 		if (this.get('proyectos')) {
 			return this.get('proyectos').objectAt(0);

@@ -1,0 +1,45 @@
+
+@mixin btn {
+
+  -webkit-font-smoothing: antialiased;
+  background-color: #EDF0F7;
+  border-radius:6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  margin: 15px 15px 0 0;
+  padding: 0.4em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button {
+  @include appearance(none);
+
+  &:hover,
+  &:focus {
+
+    color: #fff;
+    
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.btn {
+  @include btn;
+  font-size: 12px;
+  height: 100%;
+
+  &:hover {
+    color: #fff;
+    background-color: darken(#EDF0F7, 10%);
+  }
+}
