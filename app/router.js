@@ -15,6 +15,10 @@ Router.map(function() {
     this.route('show', { path: ':proyecto_id' });
   });
 
+  this.resource('mensajes', function() {
+    this.route('show', { path: ':mensaje_id' });
+  });
+
   this.resource('comisiones', function() {
     this.route('show', { path: ':comision_id' });
   });

@@ -23,7 +23,9 @@
 									<p class="rectangle-badge-notice">
 									<b>Proyectos a tratar: </b>
 									{{#each orden_del_dia.proyectos as |proyecto|}}
-										{{proyecto.codigo_exp}}
+										{{#link-to 'proyectos.show' proyecto.id}}
+											{{proyecto.codigo_exp}}
+										{{/link-to}}
 									{{/each}}
 									</p>
 								{{else}}
@@ -31,7 +33,9 @@
 										<p class="rectangle-badge-notice">
 											<b>Proyectos a tratar: </b>
 											{{#each orden_del_dia.mensajes as |mensaje|}}
-												{{mensaje.codigo_exp}}
+												{{#link-to 'mensajes.show' mensaje.id}}
+													{{mensaje.codigo_exp}}
+												{{/link-to}}
 											{{/each}}
 										</p>
 									{{/if}}

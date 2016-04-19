@@ -1,0 +1,58 @@
+{{close-delay target=".side-panel" delay=700 closeClass="close" transitionTo='mensajes'}}
+
+{{#liquid-if model class="side-panel anim-article show"}}
+<article class="proyectos-article">
+	<time class="proyecto-fecha">
+		{{time-format model.fecha 'Do [de] MMMM [de] YYYY'}}
+		{{#if model.fecha_caducidad}}
+			/ {{time-format model.fecha_caducidad 'Do [de] MMMM [de] YYYY'}}
+		{{/if}}
+	</time>
+
+	{{#perfect-scroll wheelSpeed=2}}
+		
+		<h2>{{model.tipo_proy}} <br> {{model.codigo_exp}}</h2>
+
+		<div class="article-meta">
+			<div class="meta-item">
+				<p class="meta-title">{{model.tipo_camara}}</p>
+				<small>Camara iniciadora</small>
+			</div>
+			<div class="meta-item">
+				<p class="meta-title">{{model.periodo}}</p>
+				<small>Periodo</small>
+			</div>
+		</div>
+
+		<p class="titulo">{{model.titulo}}</p>
+
+		{{#if model.sumario}}
+			<h3>Sumario</h3>
+			<p class="sumario">{{model.sumario}}</p>
+		{{/if}}
+
+		{{#if model.firmantes}}
+		<h3>Firmantes</h3>
+		<ul>
+		{{#each model.firmantes as |firmante|}}
+			<li>
+				<div class="title">{{firmante.nombre_leg_func}}</div>
+				<small>{{firmante.distrito}}</small>
+				<i>{{firmante.nombre_del_bloque}}</i>
+			</li>
+		{{/each}}
+		</ul>
+		{{/if}}
+
+		{{#if model.giros}}
+			<h3>Giros</h3>
+			<ul>
+			{{#each model.giros as |giro|}}
+				<li>{{giro.comision_nombre}}</li>
+			{{/each}}
+			</ul>
+		{{/if}}
+
+	{{/perfect-scroll}}
+</article>
+{{/liquid-if}}

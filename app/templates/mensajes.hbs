@@ -1,0 +1,9 @@
+{{outlet}}
+
+<div class="container">
+	{{filter-panel availableFilters=availableFilters title="Mensajes" action='search' moduleName='mensaje' owner=session.user.cuil}}
+
+	<div class="proyectos">
+		{{transform-list items=model.mensajes model=model action="infinityLoad" partialItem='partials/mensaje-list-item' classContainer="proyecto-container"}}
+	</div>
+</div>
