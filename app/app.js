@@ -21,6 +21,7 @@ Ember.Inflector.inflector.irregular('orador', 'oradores');
 Ember.Inflector.inflector.irregular('dictamen', 'dictamenes');
 Ember.Inflector.inflector.irregular('od', 'ordenes_del_dia');
 Ember.Inflector.inflector.irregular('mensaje', 'mensajes');
+Ember.Inflector.inflector.irregular('resultado', 'resultados');
 
 var App = Ember.Application.extend({
 	/**

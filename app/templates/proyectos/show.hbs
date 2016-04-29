@@ -53,6 +53,31 @@
 			</ul>
 		{{/if}}
 
+		{{#if model.resultados}}
+			<h3>Resultados</h3>
+			<ul>
+			{{#each model.resultados as |resultado|}}
+				<li>{{resultado.resultado}}</li>
+			{{/each}}
+			</ul>
+		{{/if}}
+
+		{{#if model.despachos}}
+			<h3>Despachos</h3>
+			<ul>		
+			{{#each model.despachos as |despacho|}}
+				<li>
+					<div>
+						<p>{{despacho.texto_legado}}</p>
+						<p>Ordenes del día</p>
+						{{#each despacho.ordenes_del_dia as |od|}}
+							<p>N° {{od.numero}} Periodo {{od.periodo}}</p>
+						{{/each}}
+					</div>
+				</li>
+			{{/each}}
+			</ul>
+		{{/if}}		
 	{{/perfect-scroll}}
 </article>
 {{/liquid-if}}

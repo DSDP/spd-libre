@@ -106,6 +106,10 @@ module.exports = function(environment) {
     ENV['simple-auth-oauth2'] = {
       serverTokenEndpoint: 'oauth/token/',
     };
+    
+    ENV.googleAnalytics = {
+      webPropertyId: 'UA-56183065-2'
+    };    
   }
 
   ENV['contentSecurityPolicy'] = {

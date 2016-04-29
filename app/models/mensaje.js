@@ -10,8 +10,6 @@ export default DS.Model.extend({
 	fecha: DS.attr('date'),
 	periodo: DS.attr('string'),
 	titulo: DS.attr('string'),
-
 	firmantes: DS.attr(''),
-
 	giros: DS.attr('')
 });

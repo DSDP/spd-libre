@@ -10,7 +10,8 @@ export default DS.Model.extend({
 	fecha: DS.attr('date'),
 	periodo: DS.attr('string'),
 	titulo: DS.attr('string'),
-
+	despachos: DS.hasMany('despacho', {async: true}),
+	resultados: DS.hasMany('resultado', {async: true}),
 	firmantes: DS.attr(''),
 
 	giros: DS.attr('')
